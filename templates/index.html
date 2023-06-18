@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+      /* Add custom styles here */
+      body {
+        background-color: #333;
+        color: #ccc;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+      }
+
+      .search-box {
+        width: 400px;
+        padding: 20px;
+        background-color: #222;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      label[for="query"] {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      input#query {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        color: #ccc;
+        background-color: #444;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+      }
+
+      button[type="submit"] {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: #0099ff;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #0077cc;
+      }
+
+      .results {
+        margin-top: 30px;
+      }
+
+      .results-box {
+  width: 800px;
+  margin: 0 auto;
+  background-color: #222;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.results li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #444;
+  border-radius: 5px;
+  color: #ea1a1a; /* Changed text color to white */
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.results li a {
+  color: #ff6600; /* Change the color to your preferred strong color */
+  text-decoration: none;
+}
+
+.results li a:hover {
+  color: #ff9900; /* Change the hover color to a different shade if desired */
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="form">
+      <div class="search-box">
+        <label for="query"><strong style="font-size: 28px;">CODEHELP</strong></label>
+        <div class="query-box">
+          <form method="POST" action="/">
+            {% raw %}{% endraw %}
+            <div class="form-group">
+              <input type="text" id="query" name="query" class="form-control" placeholder="Enter your query here">
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="results">
+      {% if links %}
+      <h3>Search Results:</h3>
+      <div class="results-box">
+        <ul>
+          {% for link in links %}
+          <li>
+            <div class="link-box">
+              <a href="{{ link }}">{{ link }}</a>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% elif error %}
+      <p>{{ error }}</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
