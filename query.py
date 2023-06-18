@@ -2,9 +2,9 @@ import math
 
 def load_vocab():
     vocab = {}
-    with open('tf-idf/vocab.txt', 'r') as f:
+    with open('tf-idf/vocab.txt', 'r', encoding='latin-1') as f:
         vocab_terms = f.readlines()
-    with open('tf-idf/idf-values.txt', 'r') as f:
+    with open('tf-idf/idf-values.txt', 'r', encoding='latin-1') as f:
         idf_values = f.readlines()
 
     for (term, idf_value) in zip(vocab_terms, idf_values):
@@ -14,7 +14,7 @@ def load_vocab():
 
 def load_documents():
     documents = []
-    with open('tf-idf/documents.txt', 'r') as f:
+    with open('tf-idf/documents.txt', 'r', encoding='latin-1') as f:
         documents = f.readlines()
     documents = [document.strip().split() for document in documents]
 
@@ -24,7 +24,7 @@ def load_documents():
 
 def load_inverted_index():
     inverted_index = {}
-    with open('tf-idf/inverted-index.txt', 'r') as f:
+    with open('tf-idf/inverted-index.txt', 'r', encoding='latin-1') as f:
         inverted_index_terms = f.readlines()
 
     for row_num in range(0, len(inverted_index_terms), 2):
@@ -37,7 +37,7 @@ def load_inverted_index():
 
 def load_question_links():
     question_links = []
-    with open('Question data/Qindex.txt', 'r') as f:
+    with open('Question data/Qindex.txt', 'r', encoding='latin-1') as f:
         question_links = f.readlines()
     question_links = [link.strip() for link in question_links]
 
