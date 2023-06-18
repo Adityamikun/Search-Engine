@@ -64,32 +64,67 @@
       }
 
       .results-box {
-  width: 800px;
-  margin: 0 auto;
-  background-color: #222;
-  border-radius: 5px;
-  padding: 20px;
-}
+        width: 800px;
+        margin: 0 auto;
+        background-color: #222;
+        border-radius: 5px;
+        padding: 20px;
+      }
 
-.results li {
-  margin-bottom: 10px;
-  padding: 10px;
-  background-color: #444;
-  border-radius: 5px;
-  color: #ea1a1a; /* Changed text color to white */
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
+      .results li {
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #444;
+        border-radius: 5px;
+        color: #ea1a1a;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
 
-.results li a {
-  color: #ff6600; /* Change the color to your preferred strong color */
-  text-decoration: none;
-}
+      .results li a {
+        color: #ff6600;
+        text-decoration: none;
+      }
 
-.results li a:hover {
-  color: #ff9900; /* Change the hover color to a different shade if desired */
-}
+      .results li a:hover {
+        color: #ff9900;
+      }
 
+      /* Media Queries for responsiveness */
+      @media screen and (max-width: 768px) {
+        .form {
+          margin-top: 30px;
+        }
+
+        .search-box {
+          width: 80%;
+          max-width: 400px;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .search-box {
+          padding: 15px;
+        }
+
+        label[for="query"] {
+          font-size: 20px;
+        }
+
+        input#query {
+          font-size: 14px;
+        }
+
+        button[type="submit"] {
+          font-size: 14px;
+        }
+
+        .results-box {
+          width: 90%;
+          max-width: 400px;
+          padding: 15px;
+        }
+      }
     </style>
   </head>
   <body>
