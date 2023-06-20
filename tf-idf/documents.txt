@@ -2403,3 +2403,9 @@ maximum binary tree
 construct string from binary tree
 most profit assigning work
 reconstruct itinerary
+sum alice
+stone game alice
+remove colored pieces if both neighbors are the same color alice
+stone game ii alice
+chalkboard xor game alice
+maximum number of words found in sentences alice

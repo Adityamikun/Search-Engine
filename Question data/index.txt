@@ -2403,3 +2403,9 @@
 606. Construct String from Binary Tree
 826. Most Profit Assigning Work
 332. Reconstruct Itinerary
+1927. Sum Alice
+877. Stone Game Alice
+2038. Remove Colored Pieces if Both Neighbors are the Same Color Alice 
+1140. Stone Game II Alice
+810. Chalkboard XOR Game Alice
+2114. Maximum Number of Words Found in Sentences Alice

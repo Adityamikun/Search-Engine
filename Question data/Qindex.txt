@@ -2403,3 +2403,9 @@ https://leetcode.com/problems/maximum-binary-tree/
 https://leetcode.com/problems/construct-string-from-binary-tree/
 https://leetcode.com/problems/most-profit-assigning-work/
 https://leetcode.com/problems/reconstruct-itinerary/
+https://leetcode.com/problems/sum-game/description/
+https://leetcode.com/problems/stone-game/
+https://leetcode.com/problems/remove-colored-pieces-if-both-neighbors-are-the-same-color/
+https://leetcode.com/problems/stone-game-ii/
+https://leetcode.com/problems/chalkboard-xor-game/description/
+https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/
